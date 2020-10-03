@@ -1,0 +1,42 @@
+.wrapper {
+  width: 125px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playbuttonon {
+  height: 100px;
+  width: 100px;
+  background-color: darkblue;
+  border: solid 2px red;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+}
+
+.playbuttonoff {
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  border: solid 2px red;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 100px;
+  color: black;
+}
+
+.playbuttonon:hover {
+  background-color: grey;
+}
+
+.playbuttonoff:hover {
+  background-color: grey;
+}
+
+.slider {
+  width: 100px;
+}
