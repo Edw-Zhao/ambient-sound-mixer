@@ -10,18 +10,19 @@
 .playbuttonon {
   height: 100px;
   width: 100px;
-  background-color: darkblue;
-  border: solid 2px red;
+  background-color: lightgrey;
+  border: solid 2px darkgrey;
   border-radius: 5px;
   text-align: center;
   line-height: 100px;
   color: white;
+  font-size: 0px;
 }
 
 .playbuttonoff {
   height: 100px;
   width: 100px;
-  background-color: orange;
+  background-color: purple;
   border: solid 2px red;
   border-radius: 5px;
   text-align: center;
@@ -29,12 +30,8 @@
   color: black;
 }
 
-.playbuttonon:hover {
-  background-color: grey;
-}
-
 .playbuttonoff:hover {
-  background-color: grey;
+  background-color: lightgrey;
 }
 
 .slider {
