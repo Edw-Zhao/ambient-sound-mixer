@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./playbutton.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "../weather.css";
-import "../weather.min.css";
+import "../animations/weather.css";
+import "../animations/weather.min.css";
 
 class PlayButton extends Component {
   constructor(props) {
@@ -36,17 +36,26 @@ class PlayButton extends Component {
     return (
       <div className="wrapper">
         <div
-          className={this.state.active ? "playbuttonoff" : "playbuttonon weather rain"}
+          className={
+            this.state.active
+              ? "playbuttonoff scale-out-center"
+              : "playbuttonon scale-in-center"
+          }
           onClick={this.handleEffects}
         >
-          <p>{this.props.id}</p>
+          {this.props.id}
           <audio src={this.props.source} id={this.props.id} loop />
+          {this.state.active ? null : this.props.anim}
         </div>
         <input
           type="range"
           min="0"
           max="100"
-          className="slider"
+          className={
+            this.state.active
+              ? "slider slide-out-top"
+              : "sliderlong scale-in-center slide-in-top"
+          }
           id="vol"
           onChange={this.handleVolChange}
         />
