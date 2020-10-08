@@ -12,10 +12,13 @@
   height: 150px;
   width: 150px;
   background-color: black;
-  border: solid 2px darkgrey;
+  border: solid 3px rgb(53, 53, 53);
   border-radius: 5px;
   font-size: 0px;
   opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .playbuttonoff {
@@ -25,9 +28,11 @@
   border: solid 2px white;
   border-radius: 5px;
   text-align: center;
-  line-height: 95px;
   z-index: 5;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .playbuttonoff:hover {
