@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "./soundboard.css";
 import PlayButton from "./playbutton";
-import Waves from "../audio/Waves.mp3";
-import BigBen from "../audio/BigBen.mp3";
-import FirePlace from "../audio/FirePlace.mp3";
-import "../animations/weather.css";
-import "../animations/weather.min.css";
+import Wavesmp3 from "../audio/Waves.mp3";
+import BigBenmp3 from "../audio/BigBen.mp3";
+import FirePlacemp3 from "../audio/FirePlace.mp3";
+import Rainmp3 from "../audio/Rain.mp3";
 import "../animations/fireflies.sass";
 import "bootstrap/dist/css/bootstrap.css";
 import RainAnim from "../animations/rainanim";
@@ -14,9 +13,10 @@ import WavesAnim from "../animations/wavesanim";
 import FirePlaceAnim from "../animations/fireplaceanim";
 
 const effectBank = [
-  { id: "Waves", src: Waves, anim: <WavesAnim /> },
-  { id: "BigBen", src: BigBen, anim: <SnowAnim /> },
-  { id: "Fireplace", src: FirePlace, anim: <FirePlaceAnim /> },
+  { id: "Waves", src: Wavesmp3, anim: <WavesAnim /> },
+  { id: "BigBen", src: BigBenmp3, anim: <SnowAnim /> },
+  { id: "Fireplace", src: FirePlacemp3, anim: <FirePlaceAnim /> },
+  { id: "Rain", src: Rainmp3, anim: <RainAnim /> },
 ];
 
 class Soundboard extends Component {
@@ -52,7 +52,7 @@ class Soundboard extends Component {
     }
 
     return (
-      <div className="background-anim weather">
+      <div className="background-anim">
         <div className="soundboard shadow-inset-center">{buttons}</div>
         {fireflyquan}
         <input

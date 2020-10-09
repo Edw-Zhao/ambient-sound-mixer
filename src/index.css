@@ -8,7 +8,5 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom, #312e2e, #111119);
-  overflow-x: scroll;
-  overflow-y: scroll;
+  background: linear-gradient(to bottom, #090911, #160b0b);
 }

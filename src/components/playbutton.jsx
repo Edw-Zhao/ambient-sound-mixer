@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./playbutton.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "../animations/weather.css";
-import "../animations/weather.min.css";
 
 class PlayButton extends Component {
   constructor(props) {

@@ -9,7 +9,8 @@ class RainAnim extends Component {
 
   render() {
     return (
-      <div className='weather rain this'>
+      <div className="sizer4">
+        <div className="weather rain"></div>
       </div>
     );
   }
