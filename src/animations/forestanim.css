@@ -1,0 +1,162 @@
+.sizer6 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #def2ff 25%,#60c9c0 75%, #27d344 100%);
+}
+.grass {
+  position: absolute;
+  height: 110px;
+  width: 175px;
+  top: 48px;
+  right: -15px;
+  background: url("grass2.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  animation: skew 5s infinite;
+}
+
+.grass2 {
+  position: absolute;
+  height: 140px;
+  width: 50px;
+  top: -5px;
+  right: -10px;
+  background: url("pngfuel.com (3).png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: top;
+  animation: sway 5s infinite;
+}
+
+.grass3 {
+  position: absolute;
+  height: 120px;
+  width: 70px;
+  top: -30px;
+  left: 50px;
+  background: url("pngfuel.com (5).png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: top;
+  animation: sway 5s infinite;
+}
+
+.grass4 {
+  position: absolute;
+  height: 160px;
+  width: 55px;
+  top: 10px;
+  left: 80px;
+  background: url("pngfuel.com (7).png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: bottom;
+  animation: swaybot 5s infinite;
+}
+
+.grass5 {
+  position: absolute;
+  height: 150px;
+  width: 75px;
+  top: -20px;
+  left: 15px;
+  background: url("pngfuel.com (8).png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  animation: sway 5s infinite;
+  transform-origin: top;
+  z-index: -4;
+}
+
+.grass6 {
+  position: absolute;
+  height: 90px;
+  width: 140px;
+  left: -50px;
+  background: url("pngfuel.com (9).png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: top;
+  animation: sway 5s infinite;
+  z-index: -5;
+}
+
+.grass7 {
+  position: absolute;
+  height: 190px;
+  width: 80px;
+  top: 40px;
+  left: 80px;
+  background: url("pngfuel.com (10).png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: bottom;
+  animation: swaybot 5s infinite;
+  z-index: -1;
+}
+
+/*
+.grass3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("grassbackground.png") no-repeat center;
+  background-size: 100% 100%;
+  background-position-y: bottom;
+  background-position-x: -75px;
+  animation: skew 5s infinite;
+}
+*/
+
+@keyframes skew {
+  0% {
+    transform: skewX(6deg) translate(-6px);
+  }
+
+  50% {
+    transform: skewX(-6deg) translate(6px);
+  }
+
+  100% {
+    transform: skewX(6deg) translate(-6px);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(4deg);
+  }
+
+  50% {
+    transform: rotate(-4deg);
+  }
+
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes swaybot {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+

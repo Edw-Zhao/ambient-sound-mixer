@@ -1,17 +1,14 @@
 .sizer {
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 254, 234, 1) 0%,
-    rgba(255, 254, 234, 1) 35%,
-    #ddddd4 100%
+    rgb(199, 225, 243) 0%,
+    rgb(222, 248, 255) 35%,
+    #ffffe6 100%
   );
   height: 100%;
   width: 100%;
   border-radius: 3px;
   position: relative;
-  display: flex;
-  align-self: center;
-  justify-self: center;
   overflow: hidden;
 }
 

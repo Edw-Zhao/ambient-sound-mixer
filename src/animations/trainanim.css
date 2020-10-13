@@ -1,0 +1,55 @@
+.sizer0 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+}
+
+.traininter {
+  position: absolute;
+  height: 155px;
+  width: 155px;
+  top: -5px;
+  right: -5px;
+  background: url("train.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  animation: rumble 1.3s infinite;
+}
+
+/*animation: rumble 5s infinite;*/
+
+@keyframes rumble {
+  0% {
+    transform: translate(-0.65px);
+  }
+
+  12.5% {
+    transform: translateY(-1px);
+  }
+
+  25% {
+    transform: translate(0.65px);
+  }
+
+  37.5% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translate(-0.65px);
+  }
+
+  65.5% {
+    transform: translateY(0.85px);
+  }
+
+  75% {
+    transform: translate(0.65px);
+  }
+  100% {
+    transform: translate(-0.65px);
+  }
+}

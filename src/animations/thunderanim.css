@@ -1,0 +1,65 @@
+.flash {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  background-color: black;
+  animation: lightningflash 5s linear infinite
+}
+/*animation: flash 7s linear infinite;*/
+
+.lightning {
+  position: absolute;
+  height: 160px;
+  width: 150px;
+  top: -10px;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+  animation: lightningshape 7.5s steps(1, end) infinite;
+}
+
+@keyframes lightningflash {
+  0%,
+  30%,
+  36%,
+  63%,
+  69%,
+  100% {
+    opacity: 0;
+    background-color: #646464;
+  }
+  33%,
+  66% {
+    opacity: 1;
+  }
+}
+
+@keyframes lightningshape {
+  0% {
+    background: url("lightning1.png") no-repeat;
+    background-size: cover;
+  }
+
+  20% {
+    background: url("lightning2.png") no-repeat;
+    background-size: cover;
+  }
+
+  40% {
+    background: url("lightning3.png") no-repeat;
+    background-size: cover;
+  }
+
+  60% {
+    background: url("lightning4.png") no-repeat;
+    background-size: cover;
+  }
+
+  80% {
+    background: url("lightning5.png") no-repeat;
+    background-size: cover;
+  }
+
+}
