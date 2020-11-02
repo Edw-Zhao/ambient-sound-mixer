@@ -1,0 +1,176 @@
+.conv {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  backface-visibility: hidden;
+}
+
+.fsizer {
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    #def2ff 25%,
+    #60c9c0 75%,
+    #27d344 100%
+  );
+}
+.grass {
+  position: absolute;
+  height: 110px;
+  width: 175px;
+  top: 48px;
+  right: -15px;
+  background: url("grass.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  animation: skew 5s infinite;
+}
+
+.whiteflowers {
+  position: absolute;
+  height: 140px;
+  width: 50px;
+  top: -5px;
+  right: -10px;
+  background: url("whiteflowers.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: top;
+  animation: sway 5s infinite;
+}
+
+.petals {
+  position: absolute;
+  height: 120px;
+  width: 70px;
+  top: -30px;
+  left: 70px;
+  background: url("petals.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: top;
+  animation: sway 5s infinite;
+  z-index: 0;
+}
+
+.blueflowers {
+  position: absolute;
+  height: 160px;
+  width: 55px;
+  top: 10px;
+  left: 90px;
+  background: url("blueflowers.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: bottom;
+  animation: swaybot 5s infinite;
+}
+
+.pinkflowers {
+  position: absolute;
+  height: 150px;
+  width: 75px;
+  top: -10px;
+  left: 20px;
+  background: url("pinkflowers.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  animation: sway 5s infinite;
+  transform-origin: top;
+  z-index: 3;
+}
+
+.maplebranch {
+  position: absolute;
+  height: 90px;
+  width: 140px;
+  left: -50px;
+  background: url("maplebranch.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: top;
+  animation: sway 5s infinite;
+  z-index: 2;
+}
+
+.grapes {
+  position: absolute;
+  height: 190px;
+  width: 80px;
+  top: 40px;
+  left: 80px;
+  background: url("grapes.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: bottom;
+  animation: swaybot 5s infinite;
+  z-index: 1;
+}
+
+/*
+.grass3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("grassbackground.png") no-repeat center;
+  background-size: 100% 100%;
+  background-position-y: bottom;
+  background-position-x: -75px;
+  animation: skew 5s infinite;
+}
+*/
+
+@keyframes skew {
+  0% {
+    transform: skewX(6deg) translate(-6px);
+  }
+
+  50% {
+    transform: skewX(-6deg) translate(6px);
+  }
+
+  100% {
+    transform: skewX(6deg) translate(-6px);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(4deg);
+  }
+
+  50% {
+    transform: rotate(-4deg);
+  }
+
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes swaybot {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(-4deg);
+  }
+}

@@ -1,24 +1,30 @@
 import React, { Component } from "react";
 import "./playbutton.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "../animations/weather.css";
 
 class PlayButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: true,
+      inactive: true,
     };
     this.handleEffects = this.handleEffects.bind(this);
     this.handleVolChange = this.handleVolChange.bind(this);
   }
 
-  handleEffects() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
-
+  componentDidUpdate(oldProps) {
     const sound = document.getElementById(this.props.id);
-    if (this.state.active === true) {
+    const newProps = this.props;
+    if (oldProps.muteall !== newProps.muteall) {
+      this.setState({ inactive: true });
+      sound.pause();
+    }
+  }
+
+  handleEffects() {
+    const currentState = this.state.inactive;
+    this.setState({ inactive: !currentState });
+    const sound = document.getElementById(this.props.id);
+    if (this.state.inactive === true) {
       sound.play();
       sound.currentTime = 0;
     } else {
@@ -29,6 +35,7 @@ class PlayButton extends Component {
   handleVolChange(e) {
     const sound = document.getElementById(this.props.id);
     sound.volume = e.target.value / 100;
+    console.log(sound.volume);
   }
 
   render() {
@@ -36,7 +43,7 @@ class PlayButton extends Component {
       <div className="wrapper">
         <div
           className={
-            this.state.active
+            this.state.inactive
               ? "playbuttonoff scale-out-center"
               : "playbuttonon scale-in-center"
           }
@@ -44,14 +51,14 @@ class PlayButton extends Component {
         >
           {this.props.id}
           <audio src={this.props.source} id={this.props.id} loop />
-          {this.state.active ? null : this.props.anim}
+          {this.state.inactive ? null : this.props.anim}
         </div>
         <input
           type="range"
           min="0"
           max="100"
           className={
-            this.state.active
+            this.state.inactive
               ? "slider slide-out-top"
               : "sliderlong scale-in-center slide-in-top"
           }

@@ -1,0 +1,49 @@
+.scsizer {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(2, 5, 1);
+}
+
+.feather {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  left: 30px;
+  background: url("pen.png") no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  transform-origin: 55px 55px;
+  animation: scribble 0.25s linear infinite;
+}
+
+.paper {
+  position: absolute;
+  height: 2px;
+  width: 100px;
+  background-color: whitesmoke;
+  top: 120px;
+  left: 25px;
+}
+
+
+@keyframes scribble {
+  0% {
+  }
+
+  33% {
+    transform: translate(-3px, -1px) rotate(-3deg);
+  }
+
+  66% {
+    transform: translate(3px, 3px) rotate(1deg);
+  }
+
+  100% {
+  }
+}
+
+/* transform: rotate(-3deg);
+transform: rotate(3deg);
+*/

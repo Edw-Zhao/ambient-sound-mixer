@@ -1,13 +1,26 @@
 .soundboard {
   background-color: rgba(211, 211, 211, 0.5);
-  height: 543px;
+  height: 650px;
   width: 800px;
-  padding: 15px 15px 0 15px;
+  padding: 16px 16px 16px 16px;
   z-index: 3;
   border-radius: 10px;
+}
+
+.buttons {
+  height: 600px;
+  width: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.options {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .background-anim {
@@ -20,8 +33,11 @@
 }
 
 .firefly-input {
-  width: 110px;
-  margin-top: 10px;
+  width: 90px;
+}
+
+.mutebtn {
+  width: 50px;
 }
 
 .shadow-inset-center {
@@ -36,8 +52,8 @@
     background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    -webkit-box-shadow: inset 0 0 800px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 800px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 1800px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: inset 0 0 1800px 0px rgba(0, 0, 0, 0.65);
     background-color: rgba(211, 211, 211, 0.5);
   }
 }
@@ -48,9 +64,9 @@
     background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    -webkit-box-shadow: inset 0 0 800px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 800px 0px rgba(0, 0, 0, 0.5);
-    background-color: rgba(211, 211, 211, 0.5);
+    -webkit-box-shadow: inset 0 0 1800px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: inset 0 0 1800px 0px rgba(0, 0, 0, 0.65);
+    background-color: rgba(211, 211, 211, 0.55);
   }
 }
 
