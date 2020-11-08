@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import Modal from "react-modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
+import { faMinusSquare } from "@fortawesome/free-regular-svg-icons";
+import { faBan } from "@fortawesome/free-solid-svg-icons";
 import "./soundboard.css";
 import PlayButton from "./playbutton";
 import Wavesmp3 from "../audio/Waves.mp3";
@@ -43,29 +48,185 @@ const effectBank = [
 ];
 
 class Soundboard extends Component {
+  intervalID = 0;
   constructor(props) {
     super(props);
     this.state = {
-      fireflynum: 25,
-      muteall: false,
+      fireFlyNum: 25,
+      toggleOnOff: true,
+      toggleReset: false,
+      timerActive: false,
+      minutes: 6,
+      seconds: 0,
+      infoActive: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleMute = this.handleMute.bind(this);
     this.handleDisable = this.handleDisable.bind(this);
+    this.handleTimer = this.handleTimer.bind(this);
+    this.handleTimerChangeMinutes = this.handleTimerChangeMinutes.bind(this);
+    this.handleTimerChangeSeconds = this.handleTimerChangeSeconds.bind(this);
+    this.handleInfo = this.handleInfo.bind(this);
+    this.handlePlusOne = this.handlePlusOne.bind(this);
+    this.handlePlusOneOff = this.handlePlusOneOff.bind(this);
+    this.handleMinusOne = this.handleMinusOne.bind(this);
+    this.handleMinusOneOff = this.handleMinusOneOff.bind(this);
+    this.handleOnOff = this.handleOnOff.bind(this);
+  }
+
+  handleOnOff() {
+    const currentOnOffState = this.state.toggleOnOff;
+    this.setState({ toggleOnOff: !currentOnOffState });
   }
 
   handleChange(e) {
-    console.log(e.target.value);
-    this.setState({ fireflynum: e.target.value });
+    if (e.target.value >= 0 && e.target.value <= 99) {
+      this.setState({ fireFlyNum: e.target.value });
+    }
+    if (e.target.value < 0) {
+      this.setState({ fireFlyNum: 0 });
+    }
+    if (e.target.value > 100) {
+      this.setState({ fireFlyNum: 99 });
+    }
   }
 
   handleMute() {
-    const currentMuteState = this.state.muteall;
-    this.setState({ muteall: !currentMuteState });
+    const currentMuteState = this.state.toggleReset;
+    this.setState({ toggleReset: !currentMuteState });
   }
 
   handleDisable() {
-    this.setState({ fireflynum: 0 });
+    this.setState({ fireFlyNum: 0 });
+  }
+
+  handlePlusOne() {
+    const addone = () => {
+      if (this.state.fireFlyNum < 99) {
+        let plusone = this.state.fireFlyNum;
+        plusone = plusone + 1;
+        this.setState({ fireFlyNum: plusone });
+      }
+    };
+
+    addone();
+    this.buttonPressTimer = setInterval(() => {
+      addone();
+    }, 110);
+  }
+
+  handlePlusOneOff() {
+    clearInterval(this.buttonPressTimer);
+  }
+
+  handleMinusOne() {
+    const subone = () => {
+      if (this.state.fireFlyNum > 0) {
+        let minusone = this.state.fireFlyNum;
+        minusone = minusone - 1;
+        this.setState({ fireFlyNum: minusone });
+      }
+    };
+
+    subone();
+    this.buttonPressTimer = setInterval(() => {
+      subone();
+    }, 110);
+  }
+
+  handleMinusOneOff() {
+    clearInterval(this.buttonPressTimer);
+  }
+
+  handleTimerChangeMinutes(e) {
+    if (this.state.timerActive === false) {
+      this.setState({ minutes: e.target.value });
+    }
+  }
+
+  handleTimerChangeSeconds(e) {
+    if (this.state.timerActive === false) {
+      this.setState({ seconds: e.target.value });
+    }
+  }
+
+  handleTimer() {
+    // Start at any time thats not 00:00 //
+    if (
+      (this.state.timerActive === false &&
+        this.state.minutes != 0 &&
+        this.state.seconds == 0) ||
+      (this.state.timerActive === false &&
+        this.state.minutes == 0 &&
+        this.state.seconds != 0) ||
+      (this.state.timerActive === false &&
+        this.state.minutes != 0 &&
+        this.state.seconds != 0)
+    ) {
+      this.setState({ timerActive: true });
+      const minutes = this.state.minutes;
+      const seconds = this.state.seconds;
+
+      if (seconds > 0) {
+        this.setState(({ seconds }) => ({
+          seconds: seconds - 1,
+        }));
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(this.myInterval);
+        } else {
+          this.setState(({ minutes }) => ({
+            minutes: minutes - 1,
+            seconds: 59,
+          }));
+        }
+      }
+      this.intervalID = setInterval(() => {
+        const minutes = this.state.minutes;
+        const seconds = this.state.seconds;
+        if (seconds > 0) {
+          this.setState(({ seconds }) => ({
+            seconds: seconds - 1,
+          }));
+        }
+        if (seconds === 0) {
+          if (minutes === 0) {
+            clearInterval(this.myInterval);
+          } else {
+            this.setState(({ minutes }) => ({
+              minutes: minutes - 1,
+              seconds: 59,
+            }));
+          }
+        }
+      }, 1000);
+    }
+    // Pause the timer if it is active //
+    if (this.state.timerActive === true) {
+      this.setState({ timerActive: false });
+      clearInterval(this.intervalID);
+      const minutes = this.state.minutes;
+      const seconds = this.state.seconds;
+      this.setState({ minutes: minutes, seconds: seconds });
+    }
+  }
+
+  componentDidUpdate(nextProps, nextState) {
+    if (
+      nextState.minutes == 0 &&
+      nextState.seconds == 0 &&
+      this.state.timerActive === true
+    ) {
+      clearInterval(this.intervalID);
+      this.setState({ timerActive: false, minutes: 5, seconds: 0 });
+      this.handleMute();
+    }
+  }
+
+  handleInfo() {
+    const currentInfoState = this.state.infoActive;
+    this.setState({ infoActive: !currentInfoState });
   }
 
   render() {
@@ -76,36 +237,103 @@ class Soundboard extends Component {
           id={effect.id}
           key={effect.id}
           anim={effect.anim}
-          muteall={this.state.muteall}
+          toggleReset={this.state.toggleReset}
+          toggleOnOff={this.state.toggleOnOff}
         />
       );
     });
 
     let fireflyquan = [];
 
-    for (let i = 0; this.state.fireflynum > i; i++) {
+    for (let i = 0; this.state.fireFlyNum > i; i++) {
       fireflyquan.push(<div className="firefly" key={i}></div>);
     }
 
     return (
-      <div className="background-anim">
-        <div className="soundboard shadow-inset-center">
-          <div className="buttons">{buttons}</div>
-          <div className="options">
-            {fireflyquan}
-            <input
-              type="number"
-              min="0"
-              max="100"
-              className="firefly-input"
-              onChange={this.handleChange}
-              placeholder="# of Fireflies"
-            />
-            <button className="disableFireflies" onClick={this.handleDisable} />
-            <button className="mutebtn" onClick={this.handleMute} />
+      <main>
+        <div className="background-anim">
+          {fireflyquan}
+          <div
+            className={
+              this.state.infoActive === true
+                ? "shadow-inset-center soundboard-blur"
+                : "shadow-inset-center soundboard"
+            }
+          >
+            <div className="buttons">{buttons}</div>
+            <div className="options">
+              <div className="powerswitch-wrapper">
+                <div className="powerswitch" id="_3rd-toggle-btn">
+                  <input type="checkbox" onClick={this.handleOnOff} />
+                  <span></span>
+                </div>
+              </div>
+
+              <div className="fireflieswrapper">
+                <p className="fireflieslabel">#Fireflies: </p>
+                <input
+                  type="number"
+                  min="0"
+                  max="100"
+                  className="firefly-input"
+                  onChange={this.handleChange}
+                  value={this.state.fireFlyNum}
+                />
+                <div className="counter-wrapper">
+                  <button
+                    className="counter-button"
+                    onMouseDown={this.handlePlusOne}
+                    onMouseUp={this.handlePlusOneOff}
+                    onMouseLeave={this.handlePlusOneOff}
+                  >
+                    <FontAwesomeIcon icon={faPlusSquare} />
+                  </button>
+                  <button
+                    className="counter-button"
+                    onMouseDown={this.handleMinusOne}
+                    onMouseUp={this.handleMinusOneOff}
+                    onMouseLeave={this.handleMinusOneOff}
+                  >
+                    <FontAwesomeIcon icon={faMinusSquare} />
+                  </button>
+                </div>
+                <button
+                  className="disable-fireflies"
+                  onClick={this.handleDisable}
+                >
+                  <FontAwesomeIcon icon={faBan} />
+                </button>
+              </div>
+              <button className="mutebtn" onClick={this.handleMute} />
+              <input
+                className="timer"
+                type="number"
+                value={this.state.minutes}
+                onChange={this.handleTimerChangeMinutes}
+              />
+              <input
+                className="timer"
+                type="number"
+                value={this.state.seconds}
+                onChange={this.handleTimerChangeSeconds}
+              />
+              <button className="timerStartBtn" onClick={this.handleTimer} />
+              <button className="InfoBtn" onClick={this.handleInfo} />
+            </div>
           </div>
+          <Modal
+            className="info fadeIn"
+            overlayClassName="infooverlay"
+            isOpen={this.state.infoActive}
+          >
+            <div className="info-exit-outer" onClick={this.handleInfo}>
+              <div className="info-exit-inner">
+                <label>Back</label>
+              </div>
+            </div>
+          </Modal>
         </div>
-      </div>
+      </main>
     );
   }
 }

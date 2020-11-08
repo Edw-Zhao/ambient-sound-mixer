@@ -110,7 +110,7 @@
   height: 190px;
   width: 80px;
   top: 40px;
-  left: 80px;
+  left: 70px;
   background: url("grapes.png") no-repeat;
   background-size: cover;
   background-position-y: center;
@@ -119,19 +119,6 @@
   animation: swaybot 5s infinite;
   z-index: 1;
 }
-
-/*
-.grass3 {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: url("grassbackground.png") no-repeat center;
-  background-size: 100% 100%;
-  background-position-y: bottom;
-  background-position-x: -75px;
-  animation: skew 5s infinite;
-}
-*/
 
 @keyframes skew {
   0% {

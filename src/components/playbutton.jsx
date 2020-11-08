@@ -12,9 +12,15 @@ class PlayButton extends Component {
   }
 
   componentDidUpdate(oldProps) {
+    console.log(this.props.toggleReset, this.props.toggleOnOff);
     const sound = document.getElementById(this.props.id);
-    const newProps = this.props;
-    if (oldProps.muteall !== newProps.muteall) {
+    if (this.props.toggleOnOff === false) {
+      sound.pause();
+    }
+    if (this.props.toggleOnOff === true && this.state.inactive === false) {
+      sound.play();
+    }
+    if (oldProps.toggleReset !== this.props.toggleReset) {
       this.setState({ inactive: true });
       sound.pause();
     }
@@ -22,9 +28,11 @@ class PlayButton extends Component {
 
   handleEffects() {
     const currentState = this.state.inactive;
-    this.setState({ inactive: !currentState });
+    if (this.props.toggleOnOff === true) {
+      this.setState({ inactive: !currentState });
+    }
     const sound = document.getElementById(this.props.id);
-    if (this.state.inactive === true) {
+    if (this.state.inactive === true && this.props.toggleOnOff === true) {
       sound.play();
       sound.currentTime = 0;
     } else {
@@ -35,7 +43,6 @@ class PlayButton extends Component {
   handleVolChange(e) {
     const sound = document.getElementById(this.props.id);
     sound.volume = e.target.value / 100;
-    console.log(sound.volume);
   }
 
   render() {
@@ -43,24 +50,32 @@ class PlayButton extends Component {
       <div className="wrapper">
         <div
           className={
-            this.state.inactive
-              ? "playbuttonoff scale-out-center"
-              : "playbuttonon scale-in-center"
+            this.props.toggleOnOff
+              ? this.state.inactive
+                ? "playbuttonoff scale-out-center"
+                : "playbuttonon scale-in-center"
+              : "playbuttonoff scale-out-center"
           }
           onClick={this.handleEffects}
         >
           {this.props.id}
           <audio src={this.props.source} id={this.props.id} loop />
-          {this.state.inactive ? null : this.props.anim}
+          {this.props.toggleOnOff
+            ? this.state.inactive
+              ? null
+              : this.props.anim
+            : null}
         </div>
         <input
           type="range"
           min="0"
           max="100"
           className={
-            this.state.inactive
-              ? "slider slide-out-top"
-              : "sliderlong scale-in-center slide-in-top"
+            this.props.toggleOnOff
+              ? this.state.inactive
+                ? "slider slide-out-top"
+                : "sliderlong scale-in-center slide-in-top"
+              : "slider slide-out-top"
           }
           id="vol"
           onChange={this.handleVolChange}

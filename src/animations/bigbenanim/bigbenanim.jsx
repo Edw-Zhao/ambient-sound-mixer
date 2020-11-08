@@ -108,50 +108,50 @@ class BigBenAnim extends Component {
           </div>
         </div>
 
-        <div class="bbcontainer">
-          <div class="bbbase"></div>
-          <div class="bbantenna"></div>
-          <div class="bbtop-line"></div>
-          <div class="bbtower">
-            <div class="bbrails">
-              <div class="r r1"></div>
+        <div className="bbcontainer">
+          <div className="bbbase"></div>
+          <div className="bbantenna"></div>
+          <div className="bbtop-line"></div>
+          <div className="bbtower">
+            <div className="bbrails">
+              <div className="r r1"></div>
             </div>
           </div>
-          <div class="bbtop-base"></div>
-          <div class="bbtower2">
-            <div class="bbrails">
-              <div class="r r1"></div>
-              <div class="r r2"></div>
-              <div class="r r3"></div>
-              <div class="r r4"></div>
+          <div className="bbtop-base"></div>
+          <div className="bbtower2">
+            <div className="bbrails">
+              <div className="r r1"></div>
+              <div className="r r2"></div>
+              <div className="r r3"></div>
+              <div className="r r4"></div>
             </div>
           </div>
-          <div class="bbclock">
-            <div class="bbclock-band"></div>
-            <div class="bbrails">
-              <div class="r r1"></div>
-              <div class="r r2"></div>
-              <div class="r r3"></div>
+          <div className="bbclock">
+            <div className="bbclock-band"></div>
+            <div className="bbrails">
+              <div className="r r1"></div>
+              <div className="r r2"></div>
+              <div className="r r3"></div>
             </div>
-            <div class="bbclock-square">
-              <div class="bbclock-circle">
-                <div class="bbhour"></div>
-                <div class="bbseconds"></div>
+            <div className="bbclock-square">
+              <div className="bbclock-circle">
+                <div className="bbhour"></div>
+                <div className="bbseconds"></div>
               </div>
             </div>
           </div>
-          <div class="bbpillar">
-            <div class="p1"></div>
-            <div class="p-shadow p2"></div>
-            <div class="p-shadow p3"></div>
-            <div class="p-shadow p4"></div>
+          <div className="bbpillar">
+            <div className="p1"></div>
+            <div className="p-shadow p2"></div>
+            <div className="p-shadow p3"></div>
+            <div className="p-shadow p4"></div>
 
-            <div class="pl1"></div>
-            <div class="pl2"></div>
+            <div className="pl1"></div>
+            <div className="pl2"></div>
 
-            <div class="pm1"></div>
-            <div class="pm2"></div>
-            <div class="pm3"></div>
+            <div className="pm1"></div>
+            <div className="pm2"></div>
+            <div className="pm3"></div>
           </div>
         </div>
       </div>
