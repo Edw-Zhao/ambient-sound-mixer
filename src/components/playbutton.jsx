@@ -12,7 +12,6 @@ class PlayButton extends Component {
   }
 
   componentDidUpdate(oldProps) {
-    console.log(this.props.toggleReset, this.props.toggleOnOff);
     const sound = document.getElementById(this.props.id);
     if (this.props.toggleOnOff === false) {
       sound.pause();

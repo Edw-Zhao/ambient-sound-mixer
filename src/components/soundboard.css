@@ -1,21 +1,46 @@
 .soundboard {
   background-color: rgba(211, 211, 211, 0.3);
-  height: 650px;
+  height: 700px;
   width: 800px;
   padding: 16px 16px 16px 16px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .soundboard-blur {
   background-color: rgba(31, 31, 31, 0.3);
-  height: 650px;
+  height: 700px;
   width: 800px;
   padding: 16px 16px 16px 16px;
   border-radius: 10px;
   filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.buttons {
+.soundboard-title-on {
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  font-size: 26px;
+  margin: 0px;
+  font-family: "AmsdamRegular";
+  text-shadow: 0px 0px 6px rgb(255, 255, 255);
+}
+
+.soundboard-title-off {
+  text-align: center;
+  font-weight: normal;
+  color: rgb(116, 116, 116);
+  font-size: 26px;
+  margin: 0px;
+  font-family: "AmsdamRegular";
+}
+
+.buttons-wrapper {
   height: 600px;
   width: 800px;
   display: flex;
@@ -35,6 +60,8 @@
 .counter-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .background-anim {
@@ -136,38 +163,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 150px;
+  width: 190px;
   background-color: rgba(0, 0, 0, 0);
+  font-family: "amsdamregular";
 }
 
 .fireflieslabel {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
   text-shadow: 0px 0px 6px rgb(243, 255, 134);
 }
 
 .firefly-input {
+  display: flex;
   background-color: rgba(0, 0, 0, 0);
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 25px;
   margin: none;
   padding-left: none;
-  padding-bottom: 4px;
-  border: solid 3px white;
+  border: solid 2px white;
   border-radius: 3px;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 16px;
+  font-family: "amsdamregular";
+  font-size: 19px;
   text-align: center;
+  padding-top: 3px;
 }
 
 .counter-button {
   color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 17.5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,14 +212,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  width: 30px;
+  height: 33px;
+  width: 33px;
   background-color: rgba(0, 0, 0, 0);
   outline: none;
-  border: solid 3px white;
+  border: solid 2px white;
   border-radius: 3px;
   color: red;
-  font-size: 24px;
+  font-size: 26px;
+}
+
+.disable-fireflies:hover {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .disable-fireflies:active {
@@ -212,20 +243,149 @@ input[type="number"] {
 }
 
 .mutebtn {
-  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  width: 33px;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border: solid 2px white;
+  border-radius: 3px;
+  color: rgb(71, 233, 255);
+  font-size: 24px;
+}
+
+.mutebtn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.mutebtn:active {
+  border: solid 3px rgb(71, 233, 255);
+}
+
+@font-face {
+  font-family: "digital-7";
+  src: url("digital-7.ttf");
+}
+
+@font-face {
+  font-family: "AmsdamRegular";
+  src: url("AmsdamRegular.ttf");
+}
+
+@font-face {
+  font-family: "Adequate-ExtraLight";
+  src: url("Adequate-ExtraLight.ttf");
+}
+
+.timer-wrapper {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 30px;
+  width: 115px;
+}
+
+.clock-wrapper {
+  margin: 0;
+  display: flex;
+  justify-items: center;
+  border: solid 2px white;
+  border-radius: 3px;
+  color: white;
+  height: 30px;
 }
 
 .timer {
-  width: 50px;
+  margin: 0;
+  font-size: 30px;
+  font-family: "digital-7";
+  width: 30px;
+  color: white;
+  border: none;
+  background-color: black;
+  font-size: 30px;
+  position: relative;
+  width: 30px;
+  right: 0px;
+  text-align: center;
+}
+
+.colon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-family: "digital-7";
+  background-color: black;
+  position: relative;
+  font-size: 35px;
+  top: -35px;
+  padding-bottom: 0px;
+  outline: none;
+  border: none;
+  animation: colon-flicker 2s infinite steps(1, end);
+}
+
+.timer:focus {
+  background-color: grey;
+  outline: none;
+}
+
+.timer-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  width: 33px;
+  background-color: rgba(0, 0, 0, 1);
+  outline: none;
+  border: solid 2px white;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.timer-start:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.timer-start:active {
+  border: solid 3px rgb(219, 230, 69);
+}
+
+.info-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 100px;
+  background-color: rgba(14, 0, 46, 0.9);
+  outline: none;
+  border: solid 2px white;
+  border-radius: 3px;
+  color: #ffcd35;
+  font-size: 21px;
+  font-family: "Adequate-ExtraLight";
+  text-shadow: 0px 0px 6px rgb(243, 255, 134);
+}
+
+.info-button:hover {
+  background-color: rgba(14, 0, 46, 0.2);
 }
 
 .info {
-  min-height: 650px;
+  min-height: 700px;
   min-width: 800px;
-  max-height: 650px;
+  max-height: 700px;
   max-width: 800px;
   padding: 16px 16px 16px 16px;
   background-color: rgba(14, 0, 46, 0.7);
+  border: solid 1.5px #ffcd35;
+  outline: none;
   color: white;
   position: absolute;
   left: 50%;
@@ -241,6 +401,29 @@ input[type="number"] {
   width: 100%;
   background-color: rgba(12, 12, 12, 0.6);
   overflow: auto;
+}
+
+.header-bar {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.contact-details {
+  font-size: 40px;
+  opacity: 0.7;
+  color: #ffcd35;
+}
+
+.contact-details:hover {
+  opacity: 1;
+}
+
+.email {
+  margin: 0px 0px 5px 5px;
+  font-size: 24px;
+  font-weight: lighter;
+  color: white;
 }
 
 .info-exit-outer {
@@ -263,7 +446,7 @@ input[type="number"] {
   width: inherit;
   background: #ffc61b;
   left: 0;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .info-exit-inner:before {
@@ -276,14 +459,60 @@ input[type="number"] {
   transform: rotate(-45deg);
 }
 
-label {
+.info-exit-label {
   font-size: 0.8em;
   line-height: 4em;
   text-transform: uppercase;
-  color: #ffc61b;
+  color: #ffcd35;
   transition: all 0.3s ease-in;
   opacity: 0;
   cursor: pointer;
+}
+
+.subheadings {
+  margin: 0;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #ffcd35;
+}
+
+.introduction {
+  font-size: 17px;
+  font-weight: lighter;
+  color: white;
+  padding: 0px 5px 0px 5px;
+}
+
+.functionalities {
+  font-size: 17px;
+  font-weight: lighter;
+  color: white;
+  padding: 0px 5px 0px 5px;
+}
+
+.functionalities-list {
+  font-size: 15px;
+  font-weight: lighter;
+  color: white;
+}
+
+.references {
+  font-size: 17px;
+  font-weight: lighter;
+  color: white;
+  padding: 0px 5px 0px 5px;
+}
+
+.refs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.anim-refs {
+  font-size: 14px;
+  color: #ffcd35;
+  font-weight: lighter;
 }
 
 .info-exit-outer:hover label {
@@ -355,6 +584,15 @@ label {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes colon-flicker {
+  0% {
+    color: white;
+  }
+  50% {
+    color: black;
   }
 }
 
