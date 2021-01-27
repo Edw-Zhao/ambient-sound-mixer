@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/ambient-sound-mixer/static/css/main.363f3b3c.chunk.css",
+    "main.js": "/ambient-sound-mixer/static/js/main.4656465f.chunk.js",
+    "main.js.map": "/ambient-sound-mixer/static/js/main.4656465f.chunk.js.map",
+    "runtime-main.js": "/ambient-sound-mixer/static/js/runtime-main.1644b834.js",
+    "runtime-main.js.map": "/ambient-sound-mixer/static/js/runtime-main.1644b834.js.map",
+    "static/js/2.d41491ac.chunk.js": "/ambient-sound-mixer/static/js/2.d41491ac.chunk.js",
+    "static/js/2.d41491ac.chunk.js.map": "/ambient-sound-mixer/static/js/2.d41491ac.chunk.js.map",
+    "index.html": "/ambient-sound-mixer/index.html",
+    "precache-manifest.f198a478283a7161c48a75a6957aebbd.js": "/ambient-sound-mixer/precache-manifest.f198a478283a7161c48a75a6957aebbd.js",
+    "service-worker.js": "/ambient-sound-mixer/service-worker.js",
+    "static/css/main.363f3b3c.chunk.css.map": "/ambient-sound-mixer/static/css/main.363f3b3c.chunk.css.map",
+    "static/js/2.d41491ac.chunk.js.LICENSE.txt": "/ambient-sound-mixer/static/js/2.d41491ac.chunk.js.LICENSE.txt",
+    "static/media/soundboard.css": "/ambient-sound-mixer/static/media/digital-7.4d871881.ttf",
+    "static/media/BigBen.mp3": "/ambient-sound-mixer/static/media/BigBen.79e5fd28.mp3",
+    "static/media/Crickets.mp3": "/ambient-sound-mixer/static/media/Crickets.85be9f72.mp3",
+    "static/media/FirePlace.mp3": "/ambient-sound-mixer/static/media/FirePlace.fcc7a09f.mp3",
+    "static/media/Forest.mp3": "/ambient-sound-mixer/static/media/Forest.90b7c1f1.mp3",
+    "static/media/GentleBreeze.mp3": "/ambient-sound-mixer/static/media/GentleBreeze.b6b37e80.mp3",
+    "static/media/LightSnow.mp3": "/ambient-sound-mixer/static/media/LightSnow.856d724a.mp3",
+    "static/media/Rain.mp3": "/ambient-sound-mixer/static/media/Rain.50ae5db0.mp3",
+    "static/media/Scribbling.mp3": "/ambient-sound-mixer/static/media/Scribbling.8ead82c8.mp3",
+    "static/media/Thunder.mp3": "/ambient-sound-mixer/static/media/Thunder.ceda738b.mp3",
+    "static/media/Train.mp3": "/ambient-sound-mixer/static/media/Train.c9ae073d.mp3",
+    "static/media/UnderWater.mp3": "/ambient-sound-mixer/static/media/UnderWater.a5035082.mp3",
+    "static/media/Waves.mp3": "/ambient-sound-mixer/static/media/Waves.497fdd6b.mp3",
+    "static/media/forestanim.css": "/ambient-sound-mixer/static/media/whiteflowers.5197b6c1.svg",
+    "static/media/rainanim.css": "/ambient-sound-mixer/static/media/lamp.783db8ab.png",
+    "static/media/thunderanim.css": "/ambient-sound-mixer/static/media/lightning5.7841ffcb.svg",
+    "static/media/scribblinganim.css": "/ambient-sound-mixer/static/media/pen.a9706d55.svg",
+    "static/media/wavesanim.scss": "/ambient-sound-mixer/static/media/wave.277095f2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1644b834.js",
+    "static/js/2.d41491ac.chunk.js",
+    "static/css/main.363f3b3c.chunk.css",
+    "static/js/main.4656465f.chunk.js"
+  ]
+}
