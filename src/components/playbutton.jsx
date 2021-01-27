@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import "./playbutton.css";
 
-class PlayButton extends Component {
+class PlayButton extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,8 +32,8 @@ class PlayButton extends Component {
     }
     const sound = document.getElementById(this.props.id);
     if (this.state.inactive === true && this.props.toggleOnOff === true) {
-      sound.play();
       sound.currentTime = 0;
+      sound.play();
     } else {
       sound.pause();
     }

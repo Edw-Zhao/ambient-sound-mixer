@@ -1,7 +1,8 @@
 {
-  "name": "soundboard",
+  "name": "ambient-sound-mixer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://edw-zhao.github.io/ambient-sound-mixer",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
@@ -12,8 +13,8 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.2",
     "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "0.0.0-experimental-27659559e",
+    "react-dom": "0.0.0-experimental-27659559e",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "react-modal": "^3.11.2",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

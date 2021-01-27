@@ -29,8 +29,8 @@ class FirePlaceAnim2 extends Component {
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
+                </div>
+                <div className="log">
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
@@ -41,8 +41,8 @@ class FirePlaceAnim2 extends Component {
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
+                </div>
+                <div className="log">
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
@@ -53,56 +53,14 @@ class FirePlaceAnim2 extends Component {
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
                 </div>
                 <div className="log">
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
                 </div>
                 <div className="log">
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                </div>
-                <div className="log">
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                </div>
-                <div className="log">
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
-                  <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>
                   <div className="streak"></div>

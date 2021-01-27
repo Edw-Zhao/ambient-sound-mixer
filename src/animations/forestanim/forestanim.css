@@ -26,7 +26,7 @@
   width: 175px;
   top: 48px;
   right: -15px;
-  background: url("grass.png") no-repeat;
+  background: url("grass.svg") no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
@@ -39,7 +39,7 @@
   width: 50px;
   top: -5px;
   right: -10px;
-  background: url("whiteflowers.png") no-repeat;
+  background: url("whiteflowers.svg") no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
@@ -53,7 +53,7 @@
   width: 70px;
   top: -30px;
   left: 70px;
-  background: url("petals.png") no-repeat;
+  background: url("petals.svg") no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
@@ -68,7 +68,7 @@
   width: 55px;
   top: 10px;
   left: 90px;
-  background: url("blueflowers.png") no-repeat;
+  background: url("blueflowers.svg") no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
@@ -82,7 +82,7 @@
   width: 75px;
   top: -10px;
   left: 20px;
-  background: url("pinkflowers.png") no-repeat;
+  background: url("pinkflowers.svg") no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
@@ -111,7 +111,7 @@
   width: 80px;
   top: 40px;
   left: 70px;
-  background: url("grapes.png") no-repeat;
+  background: url("grapes.svg") no-repeat;
   background-size: cover;
   background-position-y: center;
   background-position-x: center;

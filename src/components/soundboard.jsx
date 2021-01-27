@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import Modal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
@@ -54,12 +54,12 @@ const effectBank = [
   { id: "Crickets", src: Cricketsmp3, anim: <CricketsAnim /> },
 ];
 
-class Soundboard extends Component {
+class Soundboard extends PureComponent {
   intervalID = 0;
   constructor(props) {
     super(props);
     this.state = {
-      fireFlyNum: 25,
+      fireFlyNum: 15,
       toggleOnOff: true,
       toggleReset: false,
       timerActive: false,
@@ -105,7 +105,6 @@ class Soundboard extends Component {
   }
 
   handleChange(e) {
-    // Changes the # of fireflies in the background
     if (e.target.value >= 0 && e.target.value <= 99) {
       this.setState({ fireFlyNum: e.target.value });
     }
@@ -118,12 +117,11 @@ class Soundboard extends Component {
   }
 
   handleResetAll() {
-    // Resets everything to default settings
     clearInterval(this.intervalID);
     const currentMuteState = this.state.toggleReset;
     this.setState({
       toggleReset: !currentMuteState,
-      fireFlyNum: 25,
+      fireFlyNum: 15,
       minutes: 5,
       seconds: 0,
       timerActive: false,
@@ -463,15 +461,15 @@ class Soundboard extends Component {
             </div>
             <h2 className="subheadings">About This Project/Me:</h2>
             <p className="introduction">
-              Ambient Sound Mixer allows users to create their desired musical
-              setting by mixing the volumes of their chosen soundtracks. This
-              project was a familiarization vehicle for me to learn and practice
-              React in my chase to launch a career in web development. This was
-              also my first sizeable coding project that required time and
-              dedication, of which I had the thrill of experimenting with audio,
-              animations and general React functionalities. To see my other
-              projects or for my contact details, please click the icons on
-              top-left part of this window.
+              This app allows users to create their desired musical setting by
+              mixing the volumes of their chosen soundtracks. This project was a
+              familiarization vehicle for me to learn and practice React in my
+              chase to launch a career in web development. This was also my
+              first sizeable coding project that required time and dedication,
+              of which I had the thrill of experimenting with audio, animations
+              and general React functionalities. To see my other projects or for
+              my contact details, please click the icons on top-left part of
+              this window.
             </p>
             <h2 className="subheadings">Functionalities: </h2>
             <p className="functionalities">
@@ -508,10 +506,9 @@ class Soundboard extends Component {
             <p className="references">
               I would not have been able to fulfill my vision of this project
               without the existing animation projects that were available to me,
-              I am very grateful for the sharing nature of the coding community.
               Below are the CodePen/GitHub for the source code of the
               animations. Animations not listed were made by me, with stock
-              images from pngfuel:
+              images from pngfuel.com:
             </p>
             <div className="refs-wrapper">
               <a

@@ -5,7 +5,7 @@
   display: flex;
   overflow: hidden;
   background-color: black;
-  animation: lightningflash 5s linear infinite
+  animation: lightningflash 5s linear infinite;
 }
 /*animation: flash 7s linear infinite;*/
 
@@ -38,28 +38,27 @@
 
 @keyframes lightningshape {
   0% {
-    background: url("lightning1.png") no-repeat;
+    background: url("lightning1.svg") no-repeat;
     background-size: cover;
   }
 
   20% {
-    background: url("lightning2.png") no-repeat;
+    background: url("lightning2.svg") no-repeat;
     background-size: cover;
   }
 
   40% {
-    background: url("lightning3.png") no-repeat;
+    background: url("lightning3.svg") no-repeat;
     background-size: cover;
   }
 
   60% {
-    background: url("lightning4.png") no-repeat;
+    background: url("lightning4.svg") no-repeat;
     background-size: cover;
   }
 
   80% {
-    background: url("lightning5.png") no-repeat;
+    background: url("lightning5.svg") no-repeat;
     background-size: cover;
   }
-
 }
