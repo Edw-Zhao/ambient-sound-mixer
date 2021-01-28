@@ -40,47 +40,41 @@ import GentleBreezeAnim from "../animations/gentlebreezeanim/gentlebreezeanim";
 import CricketsAnim from "../animations/cricketsanim/cricketsanim";
 
 const effectBank = [
-  { id: "Waves", src: Wavesmp3, anim: <WavesAnim />, ref: "playRef1" },
-  { id: "Big Ben", src: BigBenmp3, anim: <BigBenAnim />, ref: "playRef2" },
+  { id: "Waves", src: Wavesmp3, anim: <WavesAnim /> },
+  { id: "Big Ben", src: BigBenmp3, anim: <BigBenAnim /> },
   {
     id: "Fire Place",
     src: FirePlacemp3,
     anim: <FirePlaceAnim />,
-    ref: "playRef3",
   },
-  { id: "Rain", src: Rainmp3, anim: <RainAnim />, ref: "playRef4" },
+  { id: "Rain", src: Rainmp3, anim: <RainAnim /> },
   {
     id: "Light Snow",
     src: LightSnowmp3,
     anim: <LightSnowAnim />,
-    ref: "playRef5",
   },
-  { id: "Forest", src: Forestmp3, anim: <ForestAnim />, ref: "playRef6" },
-  { id: "Thunder", src: Thundermp3, anim: <ThunderAnim />, ref: "playRef7" },
+  { id: "Forest", src: Forestmp3, anim: <ForestAnim /> },
+  { id: "Thunder", src: Thundermp3, anim: <ThunderAnim /> },
   {
     id: "Under Water",
     src: UnderWatermp3,
     anim: <UnderWaterAnim />,
-    ref: "playRef8",
   },
-  { id: "Train", src: Trainmp3, anim: <TrainAnim />, ref: "playRef9" },
+  { id: "Train", src: Trainmp3, anim: <TrainAnim /> },
   {
     id: "Scribbling",
     src: Scribblingmp3,
     anim: <ScribblingAnim />,
-    ref: "playRef10",
   },
   {
     id: "Gentle Breeze",
     src: GentleBreezemp3,
     anim: <GentleBreezeAnim />,
-    ref: "playRef11",
   },
   {
     id: "Crickets",
     src: Cricketsmp3,
     anim: <CricketsAnim />,
-    ref: "playRef12",
   },
 ];
 
@@ -183,6 +177,7 @@ class Soundboard extends PureComponent {
     this.playRef11.current.reset();
     this.playRef12.current.reset();
     clearInterval(this.intervalID);
+
     this.setState({
       toggleReset: !this.state.toggleReset,
       fireFlyNum: 15,
@@ -372,7 +367,9 @@ class Soundboard extends PureComponent {
   }
 
   render() {
+    let i = 0;
     let buttons = effectBank.map((effect) => {
+      i++;
       return (
         <PlayButton
           source={effect.src}
@@ -381,7 +378,7 @@ class Soundboard extends PureComponent {
           anim={effect.anim}
           toggleReset={this.state.toggleReset}
           toggleOnOff={this.state.toggleOnOff}
-          ref={eval("this." + effect.ref)}
+          ref={this[`playRef${i}`]}
         />
       );
     });
