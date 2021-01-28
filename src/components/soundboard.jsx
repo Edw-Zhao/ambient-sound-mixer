@@ -40,18 +40,48 @@ import GentleBreezeAnim from "../animations/gentlebreezeanim/gentlebreezeanim";
 import CricketsAnim from "../animations/cricketsanim/cricketsanim";
 
 const effectBank = [
-  { id: "Waves", src: Wavesmp3, anim: <WavesAnim /> },
-  { id: "Big Ben", src: BigBenmp3, anim: <BigBenAnim /> },
-  { id: "Fire Place", src: FirePlacemp3, anim: <FirePlaceAnim /> },
-  { id: "Rain", src: Rainmp3, anim: <RainAnim /> },
-  { id: "Light Snow", src: LightSnowmp3, anim: <LightSnowAnim /> },
-  { id: "Forest", src: Forestmp3, anim: <ForestAnim /> },
-  { id: "Thunder", src: Thundermp3, anim: <ThunderAnim /> },
-  { id: "Under Water", src: UnderWatermp3, anim: <UnderWaterAnim /> },
-  { id: "Train", src: Trainmp3, anim: <TrainAnim /> },
-  { id: "Scribbling", src: Scribblingmp3, anim: <ScribblingAnim /> },
-  { id: "Gentle Breeze", src: GentleBreezemp3, anim: <GentleBreezeAnim /> },
-  { id: "Crickets", src: Cricketsmp3, anim: <CricketsAnim /> },
+  { id: "Waves", src: Wavesmp3, anim: <WavesAnim />, ref: "playRef1" },
+  { id: "Big Ben", src: BigBenmp3, anim: <BigBenAnim />, ref: "playRef2" },
+  {
+    id: "Fire Place",
+    src: FirePlacemp3,
+    anim: <FirePlaceAnim />,
+    ref: "playRef3",
+  },
+  { id: "Rain", src: Rainmp3, anim: <RainAnim />, ref: "playRef4" },
+  {
+    id: "Light Snow",
+    src: LightSnowmp3,
+    anim: <LightSnowAnim />,
+    ref: "playRef5",
+  },
+  { id: "Forest", src: Forestmp3, anim: <ForestAnim />, ref: "playRef6" },
+  { id: "Thunder", src: Thundermp3, anim: <ThunderAnim />, ref: "playRef7" },
+  {
+    id: "Under Water",
+    src: UnderWatermp3,
+    anim: <UnderWaterAnim />,
+    ref: "playRef8",
+  },
+  { id: "Train", src: Trainmp3, anim: <TrainAnim />, ref: "playRef9" },
+  {
+    id: "Scribbling",
+    src: Scribblingmp3,
+    anim: <ScribblingAnim />,
+    ref: "playRef10",
+  },
+  {
+    id: "Gentle Breeze",
+    src: GentleBreezemp3,
+    anim: <GentleBreezeAnim />,
+    ref: "playRef11",
+  },
+  {
+    id: "Crickets",
+    src: Cricketsmp3,
+    anim: <CricketsAnim />,
+    ref: "playRef12",
+  },
 ];
 
 class Soundboard extends PureComponent {
@@ -69,6 +99,18 @@ class Soundboard extends PureComponent {
       infoActive: false,
       toggleEmail: false,
     };
+    this.playRef1 = React.createRef();
+    this.playRef2 = React.createRef();
+    this.playRef3 = React.createRef();
+    this.playRef4 = React.createRef();
+    this.playRef5 = React.createRef();
+    this.playRef6 = React.createRef();
+    this.playRef7 = React.createRef();
+    this.playRef8 = React.createRef();
+    this.playRef9 = React.createRef();
+    this.playRef10 = React.createRef();
+    this.playRef11 = React.createRef();
+    this.playRef12 = React.createRef();
     this.minutesRef = React.createRef();
     this.secondsRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
@@ -100,8 +142,19 @@ class Soundboard extends PureComponent {
         this.handleTimer();
       }
     }
-    const currentOnOffState = this.state.toggleOnOff;
-    this.setState({ toggleOnOff: !currentOnOffState });
+    this.setState({ toggleOnOff: !this.state.toggleOnOff });
+    this.playRef1.current.onOff();
+    this.playRef2.current.onOff();
+    this.playRef3.current.onOff();
+    this.playRef4.current.onOff();
+    this.playRef5.current.onOff();
+    this.playRef6.current.onOff();
+    this.playRef7.current.onOff();
+    this.playRef8.current.onOff();
+    this.playRef9.current.onOff();
+    this.playRef10.current.onOff();
+    this.playRef11.current.onOff();
+    this.playRef12.current.onOff();
   }
 
   handleChange(e) {
@@ -117,10 +170,21 @@ class Soundboard extends PureComponent {
   }
 
   handleResetAll() {
+    this.playRef1.current.reset();
+    this.playRef2.current.reset();
+    this.playRef3.current.reset();
+    this.playRef4.current.reset();
+    this.playRef5.current.reset();
+    this.playRef6.current.reset();
+    this.playRef7.current.reset();
+    this.playRef8.current.reset();
+    this.playRef9.current.reset();
+    this.playRef10.current.reset();
+    this.playRef11.current.reset();
+    this.playRef12.current.reset();
     clearInterval(this.intervalID);
-    const currentMuteState = this.state.toggleReset;
     this.setState({
-      toggleReset: !currentMuteState,
+      toggleReset: !this.state.toggleReset,
       fireFlyNum: 15,
       minutes: 5,
       seconds: 0,
@@ -257,9 +321,20 @@ class Soundboard extends PureComponent {
               minutes: 5,
               seconds: 0,
             });
-            const toggleReset = this.state.toggleReset;
+            this.playRef1.current.reset();
+            this.playRef2.current.reset();
+            this.playRef3.current.reset();
+            this.playRef4.current.reset();
+            this.playRef5.current.reset();
+            this.playRef6.current.reset();
+            this.playRef7.current.reset();
+            this.playRef8.current.reset();
+            this.playRef9.current.reset();
+            this.playRef10.current.reset();
+            this.playRef11.current.reset();
+            this.playRef12.current.reset();
             this.setState({
-              toggleReset: !toggleReset,
+              toggleReset: !this.state.toggleReset,
             });
           } else {
             this.setState(({ minutes }) => ({
@@ -306,6 +381,7 @@ class Soundboard extends PureComponent {
           anim={effect.anim}
           toggleReset={this.state.toggleReset}
           toggleOnOff={this.state.toggleOnOff}
+          ref={eval("this." + effect.ref)}
         />
       );
     });

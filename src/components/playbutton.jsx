@@ -9,19 +9,23 @@ class PlayButton extends PureComponent {
     };
     this.handleEffects = this.handleEffects.bind(this);
     this.handleVolChange = this.handleVolChange.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
-  componentDidUpdate(oldProps) {
+  reset() {
     const sound = document.getElementById(this.props.id);
-    if (this.props.toggleOnOff === false) {
+    this.setState({ inactive: true });
+    sound.pause();
+  }
+
+  onOff() {
+    console.log(this.props.toggleOnOff);
+    const sound = document.getElementById(this.props.id);
+    if (this.props.toggleOnOff === true) {
       sound.pause();
     }
-    if (this.props.toggleOnOff === true && this.state.inactive === false) {
+    if (this.props.toggleOnOff === false && this.state.inactive === false) {
       sound.play();
-    }
-    if (oldProps.toggleReset !== this.props.toggleReset) {
-      this.setState({ inactive: true });
-      sound.pause();
     }
   }
 
