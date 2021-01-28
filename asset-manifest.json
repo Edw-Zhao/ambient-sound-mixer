@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ambient-sound-mixer/static/css/main.2d00995e.chunk.css",
+    "main.css": "/ambient-sound-mixer/static/css/main.b5c75d93.chunk.css",
     "main.js": "/ambient-sound-mixer/static/js/main.534520d2.chunk.js",
     "main.js.map": "/ambient-sound-mixer/static/js/main.534520d2.chunk.js.map",
     "runtime-main.js": "/ambient-sound-mixer/static/js/runtime-main.1644b834.js",
@@ -8,9 +8,9 @@
     "static/js/2.45598b9e.chunk.js": "/ambient-sound-mixer/static/js/2.45598b9e.chunk.js",
     "static/js/2.45598b9e.chunk.js.map": "/ambient-sound-mixer/static/js/2.45598b9e.chunk.js.map",
     "index.html": "/ambient-sound-mixer/index.html",
-    "precache-manifest.c5bfb92b3d3043b7057b689eea0bbdee.js": "/ambient-sound-mixer/precache-manifest.c5bfb92b3d3043b7057b689eea0bbdee.js",
+    "precache-manifest.08b80f08f81455d6c9855e6deeebd0fb.js": "/ambient-sound-mixer/precache-manifest.08b80f08f81455d6c9855e6deeebd0fb.js",
     "service-worker.js": "/ambient-sound-mixer/service-worker.js",
-    "static/css/main.2d00995e.chunk.css.map": "/ambient-sound-mixer/static/css/main.2d00995e.chunk.css.map",
+    "static/css/main.b5c75d93.chunk.css.map": "/ambient-sound-mixer/static/css/main.b5c75d93.chunk.css.map",
     "static/js/2.45598b9e.chunk.js.LICENSE.txt": "/ambient-sound-mixer/static/js/2.45598b9e.chunk.js.LICENSE.txt",
     "static/media/soundboard.css": "/ambient-sound-mixer/static/media/digital-7.4d871881.ttf",
     "static/media/BigBen.mp3": "/ambient-sound-mixer/static/media/BigBen.79e5fd28.mp3",
@@ -34,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.1644b834.js",
     "static/js/2.45598b9e.chunk.js",
-    "static/css/main.2d00995e.chunk.css",
+    "static/css/main.b5c75d93.chunk.css",
     "static/js/main.534520d2.chunk.js"
   ]
 }
