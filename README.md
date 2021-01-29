@@ -1,4 +1,4 @@
-<a href="https://edw-zhao.github.io/ambient-sound-mixer/">Github Pages Link</a>
+# <a href="https://edw-zhao.github.io/ambient-sound-mixer/">Github Pages Link</a>
 
 # About This Project/Me
 
