@@ -6,9 +6,7 @@ familiarization vehicle for me to learn and practice React in my
 chase to launch a career in web development. This was also my
 first sizeable coding project that required time and dedication,
 of which I had the thrill of experimenting with audio, animations
-and general React functionalities. To see my other projects or for
-my contact details, please click the icons on top-left part of
-this window.
+and general React functionalities.
 
 <p align="center">
   <img src="./preview.gif" />
