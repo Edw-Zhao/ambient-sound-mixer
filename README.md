@@ -1,4 +1,6 @@
-<img src="./preview.gif" />
+<p align="center">
+  <img src="./preview.gif" />
+</p>
 
 # About This Project/Me
 
