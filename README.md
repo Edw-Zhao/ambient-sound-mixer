@@ -1,3 +1,5 @@
+<a href="https://edw-zhao.github.io/ambient-sound-mixer/">Github Pages Link</a>
+
 # About This Project/Me
 
 This app allows users to create their desired musical setting by
