@@ -42,3 +42,96 @@ and general React functionalities.
      soundtracks will be turned off.
     </li>
   </ul>
+
+# Animation Source Codes
+
+ <a
+                className="anim-refs"
+                href="https://codepen.io/mikegolus/pen/Jegvym"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Fireflies
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/tedmcdo/pen/PqxKXg"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Waves
+              </a>
+              <a
+                className="anim-refs"
+                href="https://github.com/moqmar/weather.css?files=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Rain + Light Snow
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/aybukeceylan/pen/OJJzXde"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Big Ben - Sky
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/shahidshaikhs/pen/ZEbagRq"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Big Ben - Tower
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/ajerez/pen/EaEEOW"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Under Water
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/miffili/pen/KrKLdO"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Gentle Breeze
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/short/pen/gGWbQB"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Fire Place
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/thelittleblacksmith/pen/jVLdEz"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Train
+              </a>
+              <a
+                className="anim-refs"
+                href="https://codepen.io/knyttneve/pen/wxOjJP"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="red"
+              >
+                Crickets
+              </a>
