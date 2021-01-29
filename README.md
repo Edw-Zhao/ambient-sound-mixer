@@ -45,6 +45,12 @@ and general React functionalities.
 
 # Animation Source Codes
 
+  I would not have been able to fulfill my vision of this project
+  without the existing animation projects that were available to me,
+  Below are the CodePen/GitHub for the source code of the
+  animations. Animations not listed were made by me, with stock
+  images from pngfuel.com:
+
  <a
                 className="anim-refs"
                 href="https://codepen.io/mikegolus/pen/Jegvym"
@@ -52,7 +58,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Fireflies
+                Fireflies,
               </a>
               <a
                 className="anim-refs"
@@ -61,7 +67,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Waves
+                Waves,
               </a>
               <a
                 className="anim-refs"
@@ -70,7 +76,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Rain + Light Snow
+                Rain + Light Snow,
               </a>
               <a
                 className="anim-refs"
@@ -79,7 +85,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Big Ben - Sky
+                Big Ben-Sky,
               </a>
               <a
                 className="anim-refs"
@@ -88,7 +94,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Big Ben - Tower
+                Big Ben-Tower,
               </a>
               <a
                 className="anim-refs"
@@ -97,7 +103,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Under Water
+                Under Water,
               </a>
               <a
                 className="anim-refs"
@@ -106,7 +112,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Gentle Breeze
+                Gentle Breeze,
               </a>
               <a
                 className="anim-refs"
@@ -115,7 +121,7 @@ and general React functionalities.
                 rel="noopener noreferrer"
                 color="red"
               >
-                Fire Place
+                Fire Place,
               </a>
               <a
                 className="anim-refs"
