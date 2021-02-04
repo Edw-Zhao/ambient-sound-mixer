@@ -1,3 +1,5 @@
+* WIP for iOS and Mac Safari compatibility 
+
 # <a href="https://edw-zhao.github.io/ambient-sound-mixer/">PREVIEW PAGE</a>
 
 
