@@ -1,4 +1,5 @@
 * WIP for iOS and Mac Safari compatibility 
+* This app uses the experimental version on concurrent React
 
 # <a href="https://edw-zhao.github.io/ambient-sound-mixer/">PREVIEW PAGE</a>
 
